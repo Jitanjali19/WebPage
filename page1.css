@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 auto;
+    
+    
+}
+.card{
+    max-width: 90%;
+    max-height: 90%;
+   
+   
+}
+
+a{
+    text-decoration: none;
+
+}
+.header{
+    margin-bottom: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.title{
+    margin-bottom: 0.6rem;
+    text-align: center;
+}
+.headerDis{
+    
+    font-size: small;
+    font-weight: 90;
+    text-align: center;
+
+}
+.cardContainer{
+  
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4,180px);
+     
+     /* grid-template-columns: repeat(auto-fit,mimax(150px,200px));
+     justify-content: center; */
+
+}
+/* media query ka use  */
+@media (max-width:700px) {
+    .cardContainer{
+        grid-template-columns: repeat(3,180px);
+    }
+    
+}
+@media (max-width:350px) {
+    .cardContainer{
+        grid-template-columns: repeat(2,180fr);
+    }
+    
+}
+@media (max-width:130px) {
+    .cardContainer{
+        grid-template-columns: repeat(1,180px);
+    }
+    
+} 
+
+
+.item{
+    
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(195, 191, 191);
+    border-radius: 5px;
+    
+    
+}
+.cardImageContainer{
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 11rem;
+}
+@media (min-width:768px) {
+    .cardImageContaine{
+        height: 16rem;
+    }
+}
+.cardImage{
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.textCard{
+   
+    display: flex;
+    flex-direction: column;
+    padding: 10px ;
+
+}
+.item:hover .cardImage{
+    transform: scale(1.1);
+    transition-duration: 300ms;
+}
+.cardTitle{
+    font-size: 0.8rem;
+    padding-bottom: 3px;
+    color: rgb(31, 29, 29);
+}
+.aboutcard{
+    font-size: 0.75rem;
+    color: rgb(88, 86, 86);
+}
+.cardTitle:hover {
+    color: rgb(40, 40, 224);
+}
+.footerBox{
+    display: flex;
+   justify-content: space-between;
+    padding-top: 2px;
+    padding: 10px;
+    align-items: flex-end;
+}
+.author{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0.8rem;
+}
+.authorInfo{
+    display: flex;
+    flex-direction: column;
+}
+.avatar{
+    width: 22px;
+    height: 22px;
+    border: 1px solid rgb(150, 148, 148);
+    border-radius: 30px;
+    background-color: rgb(190, 187, 187);
+}
+.name{
+    font-size: 0.65rem;
+    color: rgb(44, 44, 179);
+    
+}
+.year{
+    font-size: 0.65rem;
+    color: rgb(131, 128, 128);
+}
+.cardtag{
+    padding: 1px ;
+    height: 18px;
+    font-size: 0.7rem;
+    border: 1px solid rgb(86, 82, 82);
+    border-radius: 3px;
+    line-height: 1rem;
+}
+
